@@ -1,9 +1,6 @@
 package com.dandab.books;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -14,6 +11,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 class Book
 {
+
 	private int id;
 	private String imageURL;
 	private String title;
@@ -23,81 +21,77 @@ class Book
 
 	Book(int id)
 	{
-		this.id = id;
+		setId(id);
 	}
 
 	public Book()
 	{
 	}
 
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "id")
 	public int getId()
 	{
 		return id;
 	}
 
-	@Id
-	@Column(name = "id")
 	public void setId(int id)
 	{
 		this.id = id;
 	}
 
+	@Column(name = "imageURL")
 	public String getImageURL()
 	{
 		return imageURL;
 	}
 
-	@Id
-	@Column(name = "imageURL")
 	public void setImageURL(String imageURL)
 	{
 		this.imageURL = imageURL;
 	}
 
+	@Column(name = "title")
 	public String getTitle()
 	{
 		return title;
 	}
 
-	@Id
-	@Column(name = "title")
 	public void setTitle(String title)
 	{
 		this.title = title;
 	}
 
+	@Column(name = "author")
 	public String getAuthor()
 	{
 		return author;
 	}
 
-	@Id
-	@Column(name = "author")
 	public void setAuthor(String author)
 	{
 		this.author = author;
 	}
 
+	@Column(name = "price")
 	public double getPrice()
 	{
 		return price;
 	}
 
-
-	@Id
-	@Column(name = "price")
 	public void setPrice(double price)
 	{
 		this.price = price;
 	}
 
+	@Column(name = "link")
 	public String getLink()
 	{
 		return link;
 	}
 
-	@Id
-	@Column(name = "link")
 	public void setLink(String link)
 	{
 		this.link = link;
