@@ -1,8 +1,17 @@
 package com.dandab.books;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * @author Dana Dabbagh
  */
+@Entity
+@Table(name = "Book")
+@XmlRootElement
 class Book
 {
 	private int id;
@@ -19,7 +28,6 @@ class Book
 
 	public Book()
 	{
-
 	}
 
 	public int getId()
@@ -27,6 +35,8 @@ class Book
 		return id;
 	}
 
+	@Id
+	@Column(name = "id")
 	public void setId(int id)
 	{
 		this.id = id;
@@ -37,6 +47,8 @@ class Book
 		return imageURL;
 	}
 
+	@Id
+	@Column(name = "imageURL")
 	public void setImageURL(String imageURL)
 	{
 		this.imageURL = imageURL;
@@ -47,6 +59,8 @@ class Book
 		return title;
 	}
 
+	@Id
+	@Column(name = "title")
 	public void setTitle(String title)
 	{
 		this.title = title;
@@ -57,6 +71,8 @@ class Book
 		return author;
 	}
 
+	@Id
+	@Column(name = "author")
 	public void setAuthor(String author)
 	{
 		this.author = author;
@@ -67,6 +83,9 @@ class Book
 		return price;
 	}
 
+
+	@Id
+	@Column(name = "price")
 	public void setPrice(double price)
 	{
 		this.price = price;
@@ -77,6 +96,8 @@ class Book
 		return link;
 	}
 
+	@Id
+	@Column(name = "link")
 	public void setLink(String link)
 	{
 		this.link = link;
