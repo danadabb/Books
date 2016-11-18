@@ -24,13 +24,13 @@ public class BookTest
 	{
 		Book bookOne = new Book(1);
 		bookOne.setAuthor("author");
-		bookOne.setImageURL("image");
+		bookOne.setImage("image");
 		bookOne.setLink("link");
 		bookOne.setPrice(0);
 		bookOne.setTitle("title");
 		Book bookTwo = new Book(2);
 		bookTwo.setAuthor("author");
-		bookTwo.setImageURL("image");
+		bookTwo.setImage("image");
 		bookTwo.setLink("link");
 		bookTwo.setPrice(0);
 		bookTwo.setTitle("title");

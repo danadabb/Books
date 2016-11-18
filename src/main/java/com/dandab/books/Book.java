@@ -13,7 +13,7 @@ class Book
 {
 
 	private int id;
-	private String imageURL;
+	private String image;
 	private String title;
 	private String author;
 	private double price;
@@ -42,15 +42,15 @@ class Book
 		this.id = id;
 	}
 
-	@Column(name = "imageURL")
-	public String getImageURL()
+	@Column(name = "image")
+	public String getImage()
 	{
-		return imageURL;
+		return image;
 	}
 
-	public void setImageURL(String imageURL)
+	public void setImage(String image)
 	{
-		this.imageURL = imageURL;
+		this.image = image;
 	}
 
 	@Column(name = "title")
@@ -107,7 +107,7 @@ class Book
 
 		if (id != book.id) return false;
 		if (Double.compare(book.price, price) != 0) return false;
-		if (imageURL != null ? !imageURL.equals(book.imageURL) : book.imageURL != null) return false;
+		if (image != null ? !image.equals(book.image) : book.image != null) return false;
 		if (title != null ? !title.equals(book.title) : book.title != null) return false;
 		if (author != null ? !author.equals(book.author) : book.author != null) return false;
 		return link != null ? link.equals(book.link) : book.link == null;
@@ -119,7 +119,7 @@ class Book
 		int result;
 		long temp;
 		result = id;
-		result = 31 * result + (imageURL != null ? imageURL.hashCode() : 0);
+		result = 31 * result + (image != null ? image.hashCode() : 0);
 		result = 31 * result + (title != null ? title.hashCode() : 0);
 		result = 31 * result + (author != null ? author.hashCode() : 0);
 		temp = Double.doubleToLongBits(price);
