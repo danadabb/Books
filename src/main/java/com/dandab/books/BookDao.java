@@ -5,7 +5,6 @@ import org.hibernate.Session;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.List;
 
 public class BookDao {
 
