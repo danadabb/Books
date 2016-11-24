@@ -13,7 +13,7 @@ public class CommonTest {
 	protected final String title = "My Life";
 	protected final String author = "Dana Dabbagh";
 	protected final double price = 5.99;
-	protected final String link = "/api/v1/items/42";
+	protected final String link = "/api/v1/items/1";
 	protected Book book;
 	protected BookDao bookDao = BookDao.getInstance();
 
